@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A8D8B971F28A7AD0026B219 /* DeviceCameraUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D8B961F28A7AD0026B219 /* DeviceCameraUtil.m */; };
+		2A4868EB1F4AD76900089186 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4868EA1F4AD76900089186 /* CoreMotion.framework */; };
+		2A4868ED1F4AD7CD00089186 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4868EC1F4AD7CD00089186 /* CoreLocation.framework */; };
+		2A4868EF1F4E833100089186 /* libAVProVideoiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4868EE1F4E833000089186 /* libAVProVideoiOS.a */; };
+		2A4868F11F4E837100089186 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4868F01F4E837000089186 /* MediaPlayer.framework */; };
+		2A486C2A1F56B03500089186 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 2A486C291F56B03500089186 /* Data */; };
+		2AB8915F1F45BADD003B02BF /* mappano.IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8915D1F45BADD003B02BF /* mappano.IOS.a */; };
+		85DEB3DE1EE1AF7B009E08A6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85DEB3DD1EE1AF7B009E08A6 /* main.mm */; };
+		85DEB3E11EE1AF7B009E08A6 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85DEB3E01EE1AF7B009E08A6 /* AppDelegate.mm */; };
+		85DEB3E91EE1AF7B009E08A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DEB3E81EE1AF7B009E08A6 /* Assets.xcassets */; };
+		85DEB3EC1EE1AF7B009E08A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DEB3EA1EE1AF7B009E08A6 /* LaunchScreen.storyboard */; };
+		85DEB4781EE3F5A3009E08A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DEB46C1EE3F5A3009E08A6 /* Main.storyboard */; };
+		85DEB47A1EE3F5A3009E08A6 /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85DEB46F1EE3F5A3009E08A6 /* MainViewController.mm */; };
+		85DEB47B1EE3F5A3009E08A6 /* PIViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85DEB4711EE3F5A3009E08A6 /* PIViewController.mm */; };
+		88A97B831F90A43700C4DAAA /* PiPanoSDKComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A97B811F90A43700C4DAAA /* PiPanoSDKComplete.framework */; };
+		88A97B841F90A43700C4DAAA /* PiPanoSDKCompleteBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88A97B821F90A43700C4DAAA /* PiPanoSDKCompleteBundle.bundle */; };
+		DB2738481F5EA76000BB0568 /* testRes in Resources */ = {isa = PBXBuildFile; fileRef = DB2738471F5EA76000BB0568 /* testRes */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A8D8B961F28A7AD0026B219 /* DeviceCameraUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCameraUtil.m; sourceTree = "<group>"; };
+		0A8D8B981F28A7DA0026B219 /* DeviceCameraUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCameraUtil.h; sourceTree = "<group>"; };
+		2A4868EA1F4AD76900089186 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2A4868EC1F4AD7CD00089186 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2A4868EE1F4E833000089186 /* libAVProVideoiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAVProVideoiOS.a; sourceTree = "<group>"; };
+		2A4868F01F4E837000089186 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2A486C291F56B03500089186 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		2AB8915D1F45BADD003B02BF /* mappano.IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = mappano.IOS.a; sourceTree = "<group>"; };
+		85DEB3D91EE1AF7B009E08A6 /* PiPanoDevelopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPanoDevelopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DEB3DD1EE1AF7B009E08A6 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		85DEB3DF1EE1AF7B009E08A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85DEB3E01EE1AF7B009E08A6 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		85DEB3E81EE1AF7B009E08A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85DEB3EB1EE1AF7B009E08A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85DEB3ED1EE1AF7B009E08A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85DEB46C1EE3F5A3009E08A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		85DEB46E1EE3F5A3009E08A6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		85DEB46F1EE3F5A3009E08A6 /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		85DEB4701EE3F5A3009E08A6 /* PIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIViewController.h; sourceTree = "<group>"; };
+		85DEB4711EE3F5A3009E08A6 /* PIViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PIViewController.mm; sourceTree = "<group>"; };
+		88A97B811F90A43700C4DAAA /* PiPanoSDKComplete.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PiPanoSDKComplete.framework; sourceTree = "<group>"; };
+		88A97B821F90A43700C4DAAA /* PiPanoSDKCompleteBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PiPanoSDKCompleteBundle.bundle; sourceTree = "<group>"; };
+		DB2738471F5EA76000BB0568 /* testRes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testRes; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85DEB3D61EE1AF7B009E08A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A4868F11F4E837100089186 /* MediaPlayer.framework in Frameworks */,
+				2A4868ED1F4AD7CD00089186 /* CoreLocation.framework in Frameworks */,
+				2A4868EB1F4AD76900089186 /* CoreMotion.framework in Frameworks */,
+				88A97B831F90A43700C4DAAA /* PiPanoSDKComplete.framework in Frameworks */,
+				2A4868EF1F4E833100089186 /* libAVProVideoiOS.a in Frameworks */,
+				2AB8915F1F45BADD003B02BF /* mappano.IOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A2CC1AA1EE561920012895A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2AB8915D1F45BADD003B02BF /* mappano.IOS.a */,
+				2A4868EE1F4E833000089186 /* libAVProVideoiOS.a */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		85DEB3D01EE1AF7B009E08A6 = {
+			isa = PBXGroup;
+			children = (
+				DB2738471F5EA76000BB0568 /* testRes */,
+				85DEB4691EE3F5A3009E08A6 /* Examples files */,
+				2A486C291F56B03500089186 /* Data */,
+				85DEB3DB1EE1AF7B009E08A6 /* PiPanoDevelopDemo */,
+				0A2CC1AA1EE561920012895A /* Libraries */,
+				85DEB3DA1EE1AF7B009E08A6 /* Products */,
+				85DEB3F51EE1B034009E08A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85DEB3DA1EE1AF7B009E08A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85DEB3D91EE1AF7B009E08A6 /* PiPanoDevelopDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85DEB3DB1EE1AF7B009E08A6 /* PiPanoDevelopDemo */ = {
+			isa = PBXGroup;
+			children = (
+				85DEB3DF1EE1AF7B009E08A6 /* AppDelegate.h */,
+				85DEB3E01EE1AF7B009E08A6 /* AppDelegate.mm */,
+				85DEB3E81EE1AF7B009E08A6 /* Assets.xcassets */,
+				85DEB3EA1EE1AF7B009E08A6 /* LaunchScreen.storyboard */,
+				85DEB3ED1EE1AF7B009E08A6 /* Info.plist */,
+				85DEB3DC1EE1AF7B009E08A6 /* Supporting Files */,
+			);
+			path = PiPanoDevelopDemo;
+			sourceTree = "<group>";
+		};
+		85DEB3DC1EE1AF7B009E08A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85DEB3DD1EE1AF7B009E08A6 /* main.mm */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85DEB3F51EE1B034009E08A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88A97B811F90A43700C4DAAA /* PiPanoSDKComplete.framework */,
+				88A97B821F90A43700C4DAAA /* PiPanoSDKCompleteBundle.bundle */,
+				2A4868F01F4E837000089186 /* MediaPlayer.framework */,
+				2A4868EC1F4AD7CD00089186 /* CoreLocation.framework */,
+				2A4868EA1F4AD76900089186 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85DEB4691EE3F5A3009E08A6 /* Examples files */ = {
+			isa = PBXGroup;
+			children = (
+				85DEB46C1EE3F5A3009E08A6 /* Main.storyboard */,
+				85DEB46E1EE3F5A3009E08A6 /* MainViewController.h */,
+				85DEB46F1EE3F5A3009E08A6 /* MainViewController.mm */,
+				85DEB4701EE3F5A3009E08A6 /* PIViewController.h */,
+				85DEB4711EE3F5A3009E08A6 /* PIViewController.mm */,
+				0A8D8B981F28A7DA0026B219 /* DeviceCameraUtil.h */,
+				0A8D8B961F28A7AD0026B219 /* DeviceCameraUtil.m */,
+			);
+			path = "Examples files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85DEB3D81EE1AF7B009E08A6 /* PiPanoDevelopDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85DEB3F01EE1AF7B009E08A6 /* Build configuration list for PBXNativeTarget "PiPanoDevelopDemo" */;
+			buildPhases = (
+				85DEB3D51EE1AF7B009E08A6 /* Sources */,
+				85DEB3D61EE1AF7B009E08A6 /* Frameworks */,
+				85DEB3D71EE1AF7B009E08A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PiPanoDevelopDemo;
+			productName = TestPICamera720SDK;
+			productReference = 85DEB3D91EE1AF7B009E08A6 /* PiPanoDevelopDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85DEB3D11EE1AF7B009E08A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = vxinyou;
+				TargetAttributes = {
+					85DEB3D81EE1AF7B009E08A6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = V4CQGCJ22W;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 85DEB3D41EE1AF7B009E08A6 /* Build configuration list for PBXProject "PiPanoDevelopDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85DEB3D01EE1AF7B009E08A6;
+			productRefGroup = 85DEB3DA1EE1AF7B009E08A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85DEB3D81EE1AF7B009E08A6 /* PiPanoDevelopDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85DEB3D71EE1AF7B009E08A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85DEB3EC1EE1AF7B009E08A6 /* LaunchScreen.storyboard in Resources */,
+				2A486C2A1F56B03500089186 /* Data in Resources */,
+				88A97B841F90A43700C4DAAA /* PiPanoSDKCompleteBundle.bundle in Resources */,
+				DB2738481F5EA76000BB0568 /* testRes in Resources */,
+				85DEB4781EE3F5A3009E08A6 /* Main.storyboard in Resources */,
+				85DEB3E91EE1AF7B009E08A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85DEB3D51EE1AF7B009E08A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A8D8B971F28A7AD0026B219 /* DeviceCameraUtil.m in Sources */,
+				85DEB47B1EE3F5A3009E08A6 /* PIViewController.mm in Sources */,
+				85DEB47A1EE3F5A3009E08A6 /* MainViewController.mm in Sources */,
+				85DEB3E11EE1AF7B009E08A6 /* AppDelegate.mm in Sources */,
+				85DEB3DE1EE1AF7B009E08A6 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85DEB3EA1EE1AF7B009E08A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85DEB3EB1EE1AF7B009E08A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85DEB3EE1EE1AF7B009E08A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85DEB3EF1EE1AF7B009E08A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85DEB3F11EE1AF7B009E08A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V4CQGCJ22W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = PiPanoDevelopDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libraries",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-force_load",
+					"$(PROJECT_DIR)/PiPanoSDKComplete.framework/PiPanoSDKComplete",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pi.tech-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		85DEB3F21EE1AF7B009E08A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V4CQGCJ22W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = PiPanoDevelopDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libraries",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-force_load",
+					"$(PROJECT_DIR)/PiPanoSDKComplete.framework/PiPanoSDKComplete",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pi.tech-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85DEB3D41EE1AF7B009E08A6 /* Build configuration list for PBXProject "PiPanoDevelopDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85DEB3EE1EE1AF7B009E08A6 /* Debug */,
+				85DEB3EF1EE1AF7B009E08A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85DEB3F01EE1AF7B009E08A6 /* Build configuration list for PBXNativeTarget "PiPanoDevelopDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85DEB3F11EE1AF7B009E08A6 /* Debug */,
+				85DEB3F21EE1AF7B009E08A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85DEB3D11EE1AF7B009E08A6 /* Project object */;
+}

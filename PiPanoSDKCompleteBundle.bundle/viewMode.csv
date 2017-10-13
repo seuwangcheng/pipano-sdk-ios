@@ -1,0 +1,17 @@
+,cn_name,en_name,unityValue
+PIVM_Immerse,沉浸,Immerse,TurnTo_oneEyeCameraDirectionViewMode
+PIVM_FishEye,鱼眼,FishEye,EPM_SPHEREOUT
+PIVM_Asteroid,小行星,Asteroid,EPM_SPHEREASTEROID
+PIVM_VR,VR,VR,EPM_VR
+PIVM_Plane,平铺,Plane,EPM_RAWPLANE
+PIVM_TwoScroll,双画卷,TwoScroll,EPM_SCROLLPLANE
+PIVM_FourSplit,四分屏,FourSplit,EPM_FOUR
+PIVM_Cylinder,圆柱,Cylinder,EPM_CYLINDER
+PIVM_Raw,原始,Raw,EPM_RAW
+PIVM_PolarPlane,极坐标平铺,PolarPlane,EPM_RAWPOLARPLANE
+PIVM_PolarCylinder,极坐标圆柱,PolarCylinder,EPM_CYLINDERPOLAR
+PIVM_Nav,导航,Nav,EPM_NAV
+PIVM_Mix,综合,Mix,EPM_NAVMIX
+PIVM_FallIn,坠入,FallIn,EPM_FULL
+PIVM_WideAngle,广角,WideAngle,EPM_WIDEANGLE
+PIVM_CylinderPlane,圆柱平铺,CylinderPlane,EPM_CYLINDERPLANE

@@ -1,0 +1,4 @@
+,PIVM_FishEye,PIVM_Immerse,PIVM_Asteroid,PIVM_Cylinder,PIVM_PolarCylinder,PIVM_VR,PIVM_Raw,PIVM_Plane,PIVM_PolarPlane,PIVM_FourSplit,PIVM_Nav,PIVM_Mix,PIVM_FallIn,PIVM_WideAngle,PIVM_TwoScroll,PIVM_CylinderPlane
+PISM_OneEye,Pano11,Pano11,Pano11,,Raw11,Pano11,Raw11,Pano11,Raw11,Pano11,Pano11,Pano11,Pano11,Raw11,Raw11,Raw11
+PISM_TwoEye,Pano21,Pano21,Pano21,Pano21,,Pano21,Pano21,Pano21,,,,,,,,
+PISM_Full21,Raw21,Raw21,Raw21,Raw21,,Raw21,Raw21,Raw21,,,,,,,,

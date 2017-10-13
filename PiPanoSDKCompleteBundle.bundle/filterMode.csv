@@ -1,0 +1,12 @@
+,cn_name,en_name,unityValue
+PIFM_None,无,None,PP_NONE
+PIFM_Bleach,锐化,Bleach,PP_Bleach
+PIFM_Charcoal,木炭笔,Charcoal,PP_Charcoal
+PIFM_Contours,轮廓,Contours,PP_Contours
+PIFM_Desaturate,老照片,Desaturate,PP_Desaturate
+PIFM_Emboss,浮雕,Emboss,PP_Emboss
+PIFM_Pixelated,像素化,Pixelated,PP_Pixelated
+PIFM_Posterize,海报,Posterize,PP_Posterize
+PIFM_Vintage,暖色,Vintage,PP_Vintage
+PIFM_Blueberry,蓝莓,Blueberry,PP_Blueberry
+PIFM_Amethyst,紫晶,Amethyst,PP_Amethyst
