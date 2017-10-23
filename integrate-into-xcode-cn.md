@@ -14,9 +14,23 @@
 
 ## 二.添加framework 到 Xcode工程
 
-### 1.添加必要的文件到Xcode工程
+### 1.SDK压缩包目录结构
 
-#### 1.1 添加framework
+解压PiPanoSDKComplete.zip，会得到以下文件：
+
+![压缩包](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-10-23-Snip20171020_1.png)
+
+其中，`Data`，`Libraries`，`PiPanoSDKComplete.framework`，`PiPanoSDKCompleteBundle.bundle`是Xcode工程必须要的文件，`Demo`和`Doc`是示例工程和开发文档。
+
+==如果要运行Demo示例工程，请把`PiPanoSDKComplete.framework`，`PiPanoSDKCompleteBundle.bundle`拷贝到Demo根目录。==
+
+
+
+
+
+### 2.添加必要的文件到Xcode工程
+
+#### 2.1 添加framework
 
 首先把`PiPanoSDKComplete.framework`，`PiPanoSDKCompleteBundle.bundle` 添加到工程。
 
@@ -30,7 +44,7 @@
 
 
 
-#### 1.2 添加Libraries
+#### 2.2 添加Libraries
 
 把PiPanoSDK的 `Libraries`目录添加到 Xcode工程根目录。如果已经存在相同名字目录，把`Libraries`里面2个.a文件合并进去即可。
 
@@ -42,7 +56,7 @@
 
 
 
-#### 1.3 添加Data目录
+#### 2.3 添加Data目录
 
 把Data目录添加到 Xcode 工程根目录。==必须以引用的形式添加到工程。==
 
@@ -56,7 +70,7 @@
 
 
 
-#### 1.4 添加链接器flag
+#### 2.4 添加链接器flag
 
 Build Settings -> Other Linker Flags：添加 `-force_load $(PROJECT_DIR)/PiPanoSDKComplete.framework/PiPanoSDKComplete`
 

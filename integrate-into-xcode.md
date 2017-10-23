@@ -1,26 +1,40 @@
-# 集成PiPanoSDK到Xcode
+# Integrate PiPanoSDK into Xcode
 
+## Ⅰ.Restrictions
 
+​	Software: iOS 8.0 or later
 
-## 一.使用限制
-
-​	软件要求：iOS 8.0以上
-
-​	硬件要求：iPhone5以后的 iPhone和iPad设备。==不支持iOS模拟器==
-
+​	Device：iPhone5 or later  iPhone or iPad devices.   **iOS simulator is not supported.**
 
 
 
 
-## 二.添加framework 到 Xcode工程
 
-### 1.添加必要的文件到Xcode工程
+## Ⅱ.Integrate PiPanoSDK into Xcode Project
 
-#### 1.1 添加framework
+### 1.PiPanoSDK File Directory Info
 
-首先把`PiPanoSDKComplete.framework`，`PiPanoSDKCompleteBundle.bundle` 添加到工程。
+Unzip PiPanoSDKComplete.zip, get PiPanoSDK directory.
 
-然后PiPanoSDK需要使用以下几个系统 framework ，也把它们添加到工程。
+![zip](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-10-23-Snip20171020_1.png)
+
+Xcode required directories and files: `Data`, `Libraries`, `PiPanoSDKComplete.framework`，`PiPanoSDKCompleteBundle.bundle`
+
+There is a develop docment and API preferences in `Doc`,  and there is a simple demo project in `Demo`. 
+
+**If you want run the demo project, you need to copy`PiPanoSDKComplete.framework` and `PiPanoSDKCompleteBundle.bundle` to  `Demo`.**
+
+
+
+
+
+### 2.Add Framework and Libraries to Your project
+
+#### 2.1 Add Framework
+
+Add `PiPanoSDKComplete.framework`, `PiPanoSDKCompleteBundle.bundle` to your Xcode project.
+
+Then add three system frameworks which PiPanoSDK depends: 
 
 `MediaPlayer.framework`  `CoreMotion.framework` `CoreLocation.framework`
 
@@ -30,35 +44,35 @@
 
 
 
-#### 1.2 添加Libraries
+#### 2.2 Add Libraries
 
-把PiPanoSDK的 `Libraries`目录添加到 Xcode工程根目录。如果已经存在相同名字目录，把`Libraries`里面2个.a文件合并进去即可。
+Add  `Libraries` to the root directory of your project. If your project already had the Libraries directory named   `Libraries` , just add  the mappano.a and libAVProVideoiOS.a to your  `Libraries`.
 
-![库文件](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074440.jpg)
+![Libraries](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074440.jpg)
 
-然后设置库搜索路径：Build Settings -> Library Search Paths：添加一个 `$(PROJECT_DIR)/Libraries`
-
-
-
-
-
-#### 1.3 添加Data目录
-
-把Data目录添加到 Xcode 工程根目录。==必须以引用的形式添加到工程。==
-
-![data引用添加](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074442.jpg)
-
-
-
-![Data结果](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074439.jpg)
+Set Library Search Paths:  Build Settings -> Library Search Paths：add  `$(PROJECT_DIR)/Libraries`.
 
 
 
 
 
-#### 1.4 添加链接器flag
+#### 2.3 Add Data Folder
 
-Build Settings -> Other Linker Flags：添加 `-force_load $(PROJECT_DIR)/PiPanoSDKComplete.framework/PiPanoSDKComplete`
+Add `Data` to your project , make sure **add folder with Create folder references**.
+
+![add-data](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074442.jpg)
+
+
+
+![add-data-result](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-09-11-074439.jpg)
+
+
+
+
+
+#### 2.4 Add Linker Flag
+
+Build Settings -> Other Linker Flags：add  `-force_load $(PROJECT_DIR)/PiPanoSDKComplete.framework/PiPanoSDKComplete`
 
 ![Snip20170930_2](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-10-23-Snip20171020_4.png)
 
@@ -66,17 +80,17 @@ Build Settings -> Other Linker Flags：添加 `-force_load $(PROJECT_DIR)/PiPano
 
 
 
-## 三.修改入口代码
+## Ⅲ. Motify main.m and AppDelegate
 
-### 1.修改 main.m：
+### 1.Motify main.m：
 
-首先把`main.m`后缀名改为 mm。然后添加以下代码：
+Change `main.m` to  main.mm,  and add some code:
 
 ```objective-c
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-//添加PiPanoSDK头文件
+//PiPanoSDK Header
 #import <PiPanoSDKComplete/PiPanoSDK.h>
 #include <csignal>
 const char* AppControllerClassName = "AppDelegate";
@@ -85,7 +99,7 @@ int main(int argc, char* argv[])
 {
     @autoreleasepool
     {
-        //PiPanoSDK需要的代码
+        //PiPanoSDK code
         UnityInitRuntime(argc, argv);
       	RegisterFeatures();
         std::signal(SIGPIPE, SIG_IGN);
@@ -98,13 +112,15 @@ int main(int argc, char* argv[])
 
 
 
+**Because of using C function in PiPanoSDK, if you import PiPanoSDK.h in m file, your have to change the suffix to mm.**
 
 
-### 2.修改AppDelegate
 
-`AppDelegate.h`：
+### 2.Modify AppDelegate
 
-修改继承关系，把AppDelegate继承自`UnityAppController`。并且添加`willStartWithViewController`方法。
+In `AppDelegate.h` : 
+
+Change inheritance relationship, AppDelegate inherited from `UnityAppController` .  Add method`willStartWithViewController`.
 
 ```objective-c
 #import <UIKit/UIKit.h>
@@ -118,28 +134,28 @@ int main(int argc, char* argv[])
 
 
 
-`AppDelegate.m`：后缀名改为 mm。
+In `AppDelegate.m` :  change suffix to mm.
 
-1.实现`willStartWithViewController`方法，在这里设置你的项目主视图。
+1.Implement method `willStartWithViewController`, and define your main UIView in it.
 
 ```objective-c
 - (void)willStartWithViewController:(UIViewController*)controller {
-    [super willStartWithViewController:controller];//调用父类方法
+    [super willStartWithViewController:controller];//call super method first
     
-    //初始化你的主视图
+    //init your main UIView
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainViewController *mainVC = [storyBoard instantiateViewControllerWithIdentifier:@"idMainViewController"];
     
-    //记录主视图的controller
+    //set your main view controller
     [super setMainViewController:mainVC mainViewNavigationCtler:nil];
 }
 ```
 
-2.UIApplication相关的几个方法内，必须先调用父类方法。
+2.Call super method first in these methods:
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  	//先调用父类方法
+  	//call super method first
     [super application: application didFinishLaunchingWithOptions:launchOptions];
     
   	// Override point for customization after application launch.
@@ -147,32 +163,28 @@ int main(int argc, char* argv[])
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    //先调用父类方法
+    //call super method first
     [super applicationWillResignActive: application];
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    //先调用父类方法
+    //call super method first
     [super applicationDidEnterBackground: application];
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    //先调用父类方法
+    //call super method first
     [super applicationWillEnterForeground: application];
 }
 
-
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    //先调用父类方法
+    //call super method first
     [super applicationDidBecomeActive: application];
    
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
-    //先调用父类方法
+    //call super method first
     [super applicationWillTerminate: application];
     
 }
@@ -180,5 +192,5 @@ int main(int argc, char* argv[])
 
 
 
-**经过以上更改，PiPano就成功整合在你的工程里了。**
+**After these changes, PiPanoSDK is successfully integrated into your project.**
 

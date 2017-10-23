@@ -1,7 +1,7 @@
 # PiPanoSDK-iOS
 ## Brief
 
-[中文版点这里](https://github.com/pisofttech/pipano-sdk-ios/blob/master/README-cn.md)
+[中文版](https://github.com/pisofttech/pipano-sdk-ios/blob/master/README-cn.md)
 
 PiPanoSDK is a set of software development kits designed to process panoramic images with the following features:
 
@@ -25,7 +25,7 @@ PiPanoSDK is a set of software development kits designed to process panoramic im
 
 ## Integrate into Xcode
 
-[Integrate PiPanoSDK into Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/集成PiPanoSDK到Xcode.md)
+[Integrate PiPanoSDK into Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/integrate-into-xcode.md)
 
 
 
@@ -80,7 +80,7 @@ PiPano initialization takes a bit of time. After completion, there will be a blo
 
 ### 4.Browse panorama image&video
 
-Call method`openPhoto` to browse panorama image. Sample code:
+Call method `openPhoto` to browse panorama image. Sample code:
 
 ```objective-c
 - (void)openPhoto:(id)sender
@@ -92,7 +92,7 @@ Call method`openPhoto` to browse panorama image. Sample code:
 
 
 
-Call method`openVideo` to browse panorama image. Sample code:
+Call method `openVideo` to browse panorama image. Sample code:
 
 ```objective-c
 - (void)openPhoto:(id)sender
