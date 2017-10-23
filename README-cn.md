@@ -19,7 +19,7 @@ PiPanoSDK 是一套用于处理全景图像的开发工具包，包含以下功�
 
 ## 集成到Xcode工程
 
-[集成PiPanoSDK到Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/集成PiPanoSDK到Xcode.md)
+[集成PiPanoSDK到Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/integrate-into-xcode-cn.md)
 
 
 
