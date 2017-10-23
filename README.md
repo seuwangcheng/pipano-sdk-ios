@@ -1,7 +1,7 @@
 # PiPanoSDK-iOS
 ## Brief
 
-[中文版点这里]()
+[中文版点这里](https://github.com/pisofttech/pipano-sdk-ios/blob/master/README-cn.md)
 
 PiPanoSDK is a set of software development kits designed to process panoramic images with the following features:
 
