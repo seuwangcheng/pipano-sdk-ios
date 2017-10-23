@@ -1,13 +1,19 @@
 # PiPanoSDK-iOS
-## 简介
+## Brief
 
-PiPanoSDK 是一套用于处理全景图像的开发工具包，包含以下功能：
+[中文版点这里]()
 
-1. 支持 浏览图片、播放视频、预览视频流。
-2. 支持图像输入源包含：单鱼眼，双鱼眼，全景2:1等；
-3. 支持多种展开模式：沉浸、鱼眼、小行星、圆柱、VR、双画卷等；
-4. 支持多种滤镜效果：锐化、木炭笔、轮廓、蓝莓、像素化等；
-5. 支持多种过场动画：翻转、渐变、开门、光圈、折叠等；
+PiPanoSDK is a set of software development kits designed to process panoramic images with the following features:
+
+1.Browse images, play video and preview device video stream;
+
+2.Support source mode includeing OneEye, TwoEye and Full21;
+
+3.Support various view modes: Immerse, FishEye, Asteroid, Cylinder, VR, TwoScroll, etc ;
+
+4.Support various filter effects: Bleach, Charcoal, Contours, Blueberry, Pixelated, etc ;
+
+5.Support a set of transition animations: Flip, Fade, Gate, Circle, Fold , etc ;
 
 ![沉浸](ReadmeImages/沉浸.gif) ![小行星](ReadmeImages/小行星.gif)
 
@@ -17,53 +23,51 @@ PiPanoSDK 是一套用于处理全景图像的开发工具包，包含以下功�
 
 
 
-## 集成到Xcode工程
+## Integrate into Xcode
 
-[集成PiPanoSDK到Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/集成PiPanoSDK到Xcode.md)
+[Integrate PiPanoSDK into Xcode](https://github.com/pisofttech/pipano-sdk-ios/blob/master/集成PiPanoSDK到Xcode.md)
 
 
 
-## 演示Demo
+## Demo
 
-扫描二维码
+Scan QR code
 
 ![下载二维码](http://fortylin-image.oss-cn-shenzhen.aliyuncs.com/doc/2017-10-13-github%E4%B8%8B%E8%BD%BD%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 
-下载链接 ：[App Store](http://itunes.apple.com/app/id1290710793)
+or download link: [App Store](http://itunes.apple.com/app/id1290710793)
 
 
 
-## 调用示例
+## Basic Usage
 
-### 1.导入头文件
+### 1.Import Headers
 
-PiPanoSDK的核心功能都在一个接口里：`PiPano`，它提供了一些静态方法给开发者调用。
-
-要调用 PiPanoSDK里的功能，只需import PiPano的 framework 头文件。如下：
+Import the framework main Header file `PiPanoSDK.h`
 
 ```objective-c
-#import <PiPanoSDK/PiPanoSDK.h>
+#import <PiPanoSDKComplete/PiPanoSDK.h>
 ```
 
 
 
-### 2.获得镜头视图
+### 2.Get PiPano Camera View
 
-调用`getCameraView`来获取镜头View。PiPano将在这个View里展示全景画面，View也会自带一些输入操作。
+Call method `getCameraView` to get the camera View. PiPano will render the panorama in this View, and also  with some input operations.
 
 ```objective-c
 UIView* piCameraView = [PiPano getCameraView];
 
-//把cameraView装入一个父view里
+//put cameraView into a father view
 [superPICameraView setBounds:[[UIScreen mainScreen] bounds]];
 [superPICameraView addSubview:piCameraView];
 ```
 
 
 
-### 3.获得初始化完成事件
+### 3.On Ready Event
 
-PiPano初始化需要点时间，完成后会有一个block回调。示例代码：
+PiPano initialization takes a bit of time. After completion, there will be a block callback. Sample code:
 
 ```objective-c
 [PiPano onPiPanoSDKReady:^()
@@ -74,17 +78,27 @@ PiPano初始化需要点时间，完成后会有一个block回调。示例代码
 
 
 
-### 4.播放本地图片
+### 4.Browse panorama image&video
 
-PiPano可以播放设备本地的全景图像和视频。
-
-播放图像调用`openPhoto`，示例代码：
+Call method`openPhoto` to browse panorama image. Sample code:
 
 ```objective-c
 - (void)openPhoto:(id)sender
 {
     NSString* photoPath = [[NSBundle mainBundle] pathForResource:@"testRes/one_eye_image" ofType:@"jpg"];
     [PiPano openPhoto:photoPath sourceMode: PISM_OneEye];
+}
+```
+
+
+
+Call method`openVideo` to browse panorama image. Sample code:
+
+```objective-c
+- (void)openPhoto:(id)sender
+{
+    NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"testRes/two_eye_video" ofType:@"mp4"];
+    [PiPano openVideo:videoPath  sourceMode: PISM_TwoEye];
 }
 ```
 
