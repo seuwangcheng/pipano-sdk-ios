@@ -1,7 +1,7 @@
 # PiPanoSDK-iOS
 ## Brief
 
-![LOGO](LOGO.png)
+![LOGO](ReadmeImages/LOGO.png)
 
 [中文版](https://github.com/pisofttech/pipano-sdk-ios/blob/master/README-cn.md)
 

@@ -1,7 +1,7 @@
 # PiPanoSDK-iOS
 ## 简介
 
-![LOGO](LOGO.png)
+![LOGO](ReadmeImages/LOGO.png)
 
 PiPanoSDK 是一套用于处理全景图像的开发工具包，包含以下功能：
 
