@@ -1,6 +1,8 @@
 # PiPanoSDK-iOS
 ## 简介
 
+![LOGO](LOGO.png)
+
 PiPanoSDK 是一套用于处理全景图像的开发工具包，包含以下功能：
 
 1. 支持 浏览图片、播放视频、预览视频流。

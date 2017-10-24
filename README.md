@@ -1,6 +1,8 @@
 # PiPanoSDK-iOS
 ## Brief
 
+![LOGO](LOGO.png)
+
 [中文版](https://github.com/pisofttech/pipano-sdk-ios/blob/master/README-cn.md)
 
 PiPanoSDK is a set of software development kits designed to process panoramic images with the following features:
@@ -101,4 +103,3 @@ Call method `openVideo` to browse panorama image. Sample code:
     [PiPano openVideo:videoPath  sourceMode: PISM_TwoEye];
 }
 ```
-
